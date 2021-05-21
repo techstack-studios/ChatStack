@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		A10283452657F94E0097B7A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10283302657F9430097B7A6 /* ContentView.swift */; };
 		A10283462657F94E0097B7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10283312657F94E0097B7A6 /* Assets.xcassets */; };
 		A10283472657F94E0097B7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10283312657F94E0097B7A6 /* Assets.xcassets */; };
+		A10283552657FB570097B7A6 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10283542657FB570097B7A6 /* Keys.plist */; };
+		A10283562657FB570097B7A6 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10283542657FB570097B7A6 /* Keys.plist */; };
+		A1DCCF5526580CC200465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF5426580CC200465704 /* LeanCloud */; };
+		A1DCCF5826580CE900465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF5726580CE900465704 /* LeanCloud */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		A102833E2657F94E0097B7A6 /* ChatStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10283402657F94E0097B7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10283412657F94E0097B7A6 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A10283542657FB570097B7A6 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DCCF5526580CC200465704 /* LeanCloud in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DCCF5826580CE900465704 /* LeanCloud in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 				A10283382657F94E0097B7A6 /* iOS */,
 				A102833F2657F94E0097B7A6 /* macOS */,
 				A10283372657F94E0097B7A6 /* Products */,
+				A1DCCF5626580CE900465704 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +67,7 @@
 			children = (
 				A102832F2657F9430097B7A6 /* ChatStackApp.swift */,
 				A10283302657F9430097B7A6 /* ContentView.swift */,
+				A10283502657FAAA0097B7A6 /* Supporting Files */,
 				A10283312657F94E0097B7A6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -90,6 +99,21 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		A10283502657FAAA0097B7A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A10283542657FB570097B7A6 /* Keys.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1DCCF5626580CE900465704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +130,9 @@
 			dependencies = (
 			);
 			name = "ChatStack (iOS)";
+			packageProductDependencies = (
+				A1DCCF5426580CC200465704 /* LeanCloud */,
+			);
 			productName = "ChatStack (iOS)";
 			productReference = A10283362657F94E0097B7A6 /* ChatStack.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +150,9 @@
 			dependencies = (
 			);
 			name = "ChatStack (macOS)";
+			packageProductDependencies = (
+				A1DCCF5726580CE900465704 /* LeanCloud */,
+			);
 			productName = "ChatStack (macOS)";
 			productReference = A102833E2657F94E0097B7A6 /* ChatStack.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +183,9 @@
 				Base,
 			);
 			mainGroup = A10283292657F9430097B7A6;
+			packageReferences = (
+				A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+			);
 			productRefGroup = A10283372657F94E0097B7A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10283552657FB570097B7A6 /* Keys.plist in Resources */,
 				A10283462657F94E0097B7A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10283562657FB570097B7A6 /* Keys.plist in Resources */,
 				A10283472657F94E0097B7A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cf.techstack.ChatStack;
 				PRODUCT_NAME = ChatStack;
 				SDKROOT = iphoneos;
@@ -351,6 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cf.techstack.ChatStack;
 				PRODUCT_NAME = ChatStack;
 				SDKROOT = iphoneos;
@@ -377,6 +414,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cf.techstack.ChatStack;
 				PRODUCT_NAME = ChatStack;
 				SDKROOT = macosx;
@@ -401,6 +439,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cf.techstack.ChatStack;
 				PRODUCT_NAME = ChatStack;
 				SDKROOT = macosx;
@@ -439,6 +478,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leancloud/swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 17.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1DCCF5426580CC200465704 /* LeanCloud */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = LeanCloud;
+		};
+		A1DCCF5726580CE900465704 /* LeanCloud */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = LeanCloud;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A102832A2657F9430097B7A6 /* Project object */;
 }
