@@ -11,5 +11,6 @@ import LeanCloud
 class Client: ObservableObject {
     
     @Published var user: IMClient!
+    @Published var loggedIn = false
     
 }

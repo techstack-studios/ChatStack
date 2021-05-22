@@ -14,7 +14,8 @@ struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     
-//    func validate(username: String, password: String) -> <#return type#> {
+//    TODO: Add validating function
+//    func validate(username: String, password: String) {
 //        <#function body#>
 //    }
     
@@ -27,7 +28,7 @@ struct LoginView: View {
                     client.user.open { (result) in
                         switch result {
                         case .success:
-                            break
+                            client.loggedIn = true
                         case .failure(error: let error):
                             print(error)
                         }
@@ -36,7 +37,7 @@ struct LoginView: View {
                     print(error)
                 }
             case .failure(error: let error):
-                print(error)
+                print(error.reason ?? error.code)
             }
         }
     }
@@ -48,7 +49,7 @@ struct LoginView: View {
                 .labelStyle(IconOnlyLabelStyle())
                 .font(.system(size: 60))
                 .foregroundColor(Color(UIColor.systemGray))
-            Text("Login")
+            Text("Login to ChatStack")
                 .font(.largeTitle)
                 .bold()
             TextField("User ID", text: $username)

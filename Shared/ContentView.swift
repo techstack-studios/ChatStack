@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import LeanCloud
 
 struct ContentView: View {
+    
+    @EnvironmentObject var client: Client
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Conversations")
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

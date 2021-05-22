@@ -30,8 +30,13 @@ struct ChatStackApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environmentObject(client)
+            if client.loggedIn {
+                ContentView()
+                    .environmentObject(client)
+            } else {
+                LoginView()
+                    .environmentObject(client)
+            }
         }
     }
     
