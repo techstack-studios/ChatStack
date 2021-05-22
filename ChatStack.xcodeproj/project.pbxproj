@@ -21,6 +21,10 @@
 		A1DCCF5B26589CC400465704 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF5926589CC400465704 /* LoginView.swift */; };
 		A1DCCF612658BDA600465704 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF602658BDA600465704 /* Client.swift */; };
 		A1DCCF622658BDA600465704 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF602658BDA600465704 /* Client.swift */; };
+		A1DCCF662658F94900465704 /* ReceivedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessage.swift */; };
+		A1DCCF672658F94900465704 /* ReceivedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessage.swift */; };
+		A1DCCF692658F96200465704 /* SentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessage.swift */; };
+		A1DCCF6A2658F96200465704 /* SentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,8 @@
 		A1DCCF602658BDA600465704 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A1DCCF632658F71A00465704 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A1DCCF642658F7EC00465704 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A1DCCF652658F94800465704 /* ReceivedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessage.swift; sourceTree = "<group>"; };
+		A1DCCF682658F96200465704 /* SentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 				A102832F2657F9430097B7A6 /* ChatStackApp.swift */,
 				A10283302657F9430097B7A6 /* ContentView.swift */,
 				A1DCCF5926589CC400465704 /* LoginView.swift */,
+				A1DCCF6C2658FA0400465704 /* Message View */,
 				A1DCCF5C2658BC6300465704 /* Model */,
 				A10283502657FAAA0097B7A6 /* Supporting Files */,
 				A10283312657F94E0097B7A6 /* Assets.xcassets */,
@@ -132,6 +139,15 @@
 				A1DCCF602658BDA600465704 /* Client.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A1DCCF6C2658FA0400465704 /* Message View */ = {
+			isa = PBXGroup;
+			children = (
+				A1DCCF682658F96200465704 /* SentMessage.swift */,
+				A1DCCF652658F94800465704 /* ReceivedMessage.swift */,
+			);
+			path = "Message View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +261,9 @@
 				A1DCCF5A26589CC400465704 /* LoginView.swift in Sources */,
 				A10283442657F94E0097B7A6 /* ContentView.swift in Sources */,
 				A1DCCF612658BDA600465704 /* Client.swift in Sources */,
+				A1DCCF692658F96200465704 /* SentMessage.swift in Sources */,
 				A10283422657F94E0097B7A6 /* ChatStackApp.swift in Sources */,
+				A1DCCF662658F94900465704 /* ReceivedMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +274,9 @@
 				A1DCCF5B26589CC400465704 /* LoginView.swift in Sources */,
 				A10283452657F94E0097B7A6 /* ContentView.swift in Sources */,
 				A1DCCF622658BDA600465704 /* Client.swift in Sources */,
+				A1DCCF6A2658F96200465704 /* SentMessage.swift in Sources */,
 				A10283432657F94E0097B7A6 /* ChatStackApp.swift in Sources */,
+				A1DCCF672658F94900465704 /* ReceivedMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

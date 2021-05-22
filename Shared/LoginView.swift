@@ -58,6 +58,7 @@ struct LoginView: View {
             SecureField("Password", text: $password) {
                 handleLogin(username: username, password: password)
             }
+            // TODO: Add login button which disables when validation is false
             Spacer()
             Spacer()
         }
