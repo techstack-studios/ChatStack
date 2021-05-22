@@ -11,6 +11,8 @@ import LeanCloud
 @main
 struct ChatStackApp: App {
     
+    @StateObject var client = Client()
+    
     init() {
         if let path = Bundle.main.path(forResource: "Keys", ofType: "plist"), let keys = NSDictionary(contentsOfFile: path) as? [String: String] {
             do {
@@ -28,7 +30,9 @@ struct ChatStackApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
+                .environmentObject(client)
         }
     }
+    
 }
