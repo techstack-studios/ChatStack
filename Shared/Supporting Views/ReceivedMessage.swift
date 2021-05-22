@@ -24,7 +24,7 @@ struct ReceivedMessage: View {
                     .background(Color(.systemGray5))
                     .cornerRadius(10)
             }
-            .padding()
+            .padding(.horizontal)
             Spacer()
         }
     }

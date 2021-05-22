@@ -21,7 +21,7 @@ struct SentMessage: View {
                 .background(Color.blue)
                 .cornerRadius(10)
         }
-        .padding()
+        .padding(.horizontal)
     }
     
 }
