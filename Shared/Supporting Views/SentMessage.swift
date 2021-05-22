@@ -16,6 +16,7 @@ struct SentMessage: View {
             Spacer()
             Text(message)
                 .padding(8)
+                .padding(.horizontal, 6)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(10)

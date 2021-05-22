@@ -18,9 +18,9 @@ struct ReceivedMessage: View {
                 Text(sender)
                     .font(.caption)
                     .foregroundColor(.secondary)
-                    .padding(.leading, 10)
                 Text(message)
                     .padding(8)
+                    .padding(.horizontal, 6)
                     .background(Color(.systemGray5))
                     .cornerRadius(10)
             }
@@ -33,7 +33,10 @@ struct ReceivedMessage: View {
 
 struct ReceivedMessage_Previews: PreviewProvider {
     static var previews: some View {
-        ReceivedMessage(message: "Hello. My name is Steve.", sender: "Steve")
-            .previewLayout(.sizeThatFits)
+        Group {
+            ReceivedMessage(message: "Hello. My name is Steve.", sender: "Steve")
+            ReceivedMessage(message: "I", sender: "Steve")
+        }
+        .previewLayout(.sizeThatFits)
     }
 }
