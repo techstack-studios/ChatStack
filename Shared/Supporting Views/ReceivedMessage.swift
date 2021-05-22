@@ -17,11 +17,11 @@ struct ReceivedMessage: View {
             VStack (alignment: .leading, spacing: 2) {
                 Text(sender)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
                     .padding(.leading, 10)
                 Text(message)
                     .padding(8)
-                    .background(Color(.systemGray4))
+                    .background(Color(.systemGray5))
                     .cornerRadius(10)
             }
             .padding()
