@@ -35,6 +35,8 @@
 		A10283542657FB570097B7A6 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		A1DCCF5926589CC400465704 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A1DCCF602658BDA600465704 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		A1DCCF632658F71A00465704 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A1DCCF642658F7EC00465704 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		A10283292657F9430097B7A6 = {
 			isa = PBXGroup;
 			children = (
+				A1DCCF642658F7EC00465704 /* README.md */,
+				A1DCCF632658F71A00465704 /* LICENSE */,
 				A102832E2657F9430097B7A6 /* Shared */,
 				A10283382657F94E0097B7A6 /* iOS */,
 				A102833F2657F94E0097B7A6 /* macOS */,
