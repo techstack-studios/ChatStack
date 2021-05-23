@@ -10,46 +10,69 @@ import LeanCloud
 
 struct ContentView: View {
     
+    @Namespace var bottomID
+    
     @EnvironmentObject var client: Client
+    
     @State private var currentTyping = ""
-    @State private var messageArray: [Message] = [Message(content: "Hi", sender: "Steve"), Message(content: "Hello there", sender: "Tom"), Message(content: "What's your name?", sender: "self")]
+    @State private var messageArray: [Message] = [
+        Message(content: "Hi everyone", sender: "Steve"),
+        Message(content: "Hi", sender: "self"),
+        Message(content: "Test message", sender: "Tim")
+    ]
     
     var body: some View {
         
         NavigationView {
-            
-            ScrollView {
-                LazyVStack {
-                    ForEach(messageArray) { message in
+            VStack {
+                
+                ScrollViewReader { proxy in
+                    ScrollView {
                         
-                        if message.sender == "self" {
-                            SentMessageBubble(message: message.content)
-                        } else {
-                            ReceivedMessageBubble(message: message.content, sender: message.sender)
+                        LazyVStack {
+                            
+                            ForEach(messageArray) { message in
+                                
+                                if message.sender == "self" {
+                                    SentMessageBubble(message: message.content)
+                                } else {
+                                    ReceivedMessageBubble(message: message.content, sender: message.sender)
+                                }
+                                
+                            }
+                            
+                        }
+                        .padding()
+                        .id(bottomID)
+                        .onChange(of: messageArray) { _ in
+                            withAnimation {
+                                proxy.scrollTo(bottomID)
+                            }
                         }
                         
                     }
                 }
-                .padding()
-            }
-            .navigationTitle("TechStack Studios")
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
+                
+                HStack {
                     TextField("Message", text: $currentTyping)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button("Send") {
-                        messageArray.append(Message(content: currentTyping, sender: "self"))
+                        messageArray.append(Message(content: currentTyping.trimmingCharacters(in: .whitespacesAndNewlines), sender:"self"))
+                        currentTyping = ""
                     }
-                    .padding(.bottom, 5)
+                    .padding(.leading, 5)
+                    .font(.body.bold())
                     .disabled(currentTyping.isEmpty)
                 }
+                .padding()
+                .padding(.top, -8)
+                
             }
-            
+            .navigationTitle("Chat")
         }
         
-        // TODO: Add input field
         // TODO: Get data from LeanCloud
         // TODO: Test on macOS, try NSColor to replace UIColor
+        // TODO: Add animation
         
     }
     

@@ -16,7 +16,7 @@ struct SentMessageBubble: View {
             Spacer()
             Text(message)
                 .padding(8)
-                .padding(.horizontal, 6)
+                .padding(.horizontal, 5)
                 .foregroundColor(.white)
                 .background(Color.accentColor)
                 .cornerRadius(10)
