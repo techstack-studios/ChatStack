@@ -11,8 +11,8 @@ import LeanCloud
 struct LoginView: View {
     
     @EnvironmentObject var client: Client
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @State private var username = ""
+    @State private var password = ""
     
 //    TODO: Add validating function
 //    func validate(username: String, password: String) {
@@ -53,7 +53,7 @@ struct LoginView: View {
                 .font(.largeTitle)
                 .bold()
             TextField("User ID", text: $username)
-                .autocapitalization(.none) // FIXME: macOS uncompatible
+                .autocapitalization(.none) // FIXME: macOS incompatible
                 .disableAutocorrection(true)
             SecureField("Password", text: $password) {
                 handleLogin(username: username, password: password)

@@ -1,5 +1,5 @@
 //
-//  ReceivedMessage.swift
+//  ReceivedMessageBubble.swift
 //  ChatStack
 //
 //  Created by Andy on 2021/5/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ReceivedMessage: View {
+struct ReceivedMessageBubble: View {
     
     var message: String
     var sender: String
@@ -21,7 +21,7 @@ struct ReceivedMessage: View {
                 Text(message)
                     .padding(8)
                     .padding(.horizontal, 6)
-                    .background(Color(.systemGray5)) // FIXME: macOS uncompatible
+                    .background(Color(.systemGray5)) // FIXME: macOS incompatible
                     .cornerRadius(10)
             }
             Spacer()
@@ -30,11 +30,11 @@ struct ReceivedMessage: View {
     
 }
 
-struct ReceivedMessage_Previews: PreviewProvider {
+struct ReceivedMessageBubble_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ReceivedMessage(message: "Hello. My name is Steve.", sender: "Steve")
-            ReceivedMessage(message: "I", sender: "Steve")
+            ReceivedMessageBubble(message: "Hello. My name is Steve.", sender: "Steve")
+            ReceivedMessageBubble(message: "I", sender: "Steve")
         }
         .previewLayout(.sizeThatFits)
     }

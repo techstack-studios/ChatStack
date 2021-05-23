@@ -8,7 +8,10 @@
 import Foundation
 
 struct Message: Identifiable {
+    
     let id = UUID()
-    let message: String
+    
+    let content: String
     let sender: String
+    
 }

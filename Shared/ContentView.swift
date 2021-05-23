@@ -11,23 +11,46 @@ import LeanCloud
 struct ContentView: View {
     
     @EnvironmentObject var client: Client
-    var messageArray: [Message] = [Message(message: "Hi", sender: "Steve"), Message(message: "Hello there", sender: "Tom")]
+    @State private var currentTyping = ""
+    @State private var messageArray: [Message] = [Message(content: "Hi", sender: "Steve"), Message(content: "Hello there", sender: "Tom"), Message(content: "What's your name?", sender: "self")]
     
     var body: some View {
+        
         NavigationView {
+            
             ScrollView {
                 LazyVStack {
                     ForEach(messageArray) { message in
-                        ReceivedMessage(message: message.message, sender: message.sender)
+                        
+                        if message.sender == "self" {
+                            SentMessageBubble(message: message.content)
+                        } else {
+                            ReceivedMessageBubble(message: message.content, sender: message.sender)
+                        }
+                        
                     }
                 }
                 .padding()
             }
             .navigationTitle("TechStack Studios")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    TextField("Message", text: $currentTyping)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Button("Send") {
+                        messageArray.append(Message(content: currentTyping, sender: "self"))
+                    }
+                    .padding(.bottom, 5)
+                    .disabled(currentTyping.isEmpty)
+                }
+            }
+            
         }
+        
         // TODO: Add input field
         // TODO: Get data from LeanCloud
         // TODO: Test on macOS, try NSColor to replace UIColor
+        
     }
     
 }

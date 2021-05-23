@@ -20,10 +20,10 @@
 		A1DCCF5B26589CC400465704 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF5926589CC400465704 /* LoginView.swift */; };
 		A1DCCF612658BDA600465704 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF602658BDA600465704 /* Client.swift */; };
 		A1DCCF622658BDA600465704 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF602658BDA600465704 /* Client.swift */; };
-		A1DCCF662658F94900465704 /* ReceivedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessage.swift */; };
-		A1DCCF672658F94900465704 /* ReceivedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessage.swift */; };
-		A1DCCF692658F96200465704 /* SentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessage.swift */; };
-		A1DCCF6A2658F96200465704 /* SentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessage.swift */; };
+		A1DCCF662658F94900465704 /* ReceivedMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessageBubble.swift */; };
+		A1DCCF672658F94900465704 /* ReceivedMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF652658F94800465704 /* ReceivedMessageBubble.swift */; };
+		A1DCCF692658F96200465704 /* SentMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessageBubble.swift */; };
+		A1DCCF6A2658F96200465704 /* SentMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessageBubble.swift */; };
 		A1DCCF6E2659111800465704 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF6D2659111800465704 /* Message.swift */; };
 		A1DCCF6F2659111800465704 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF6D2659111800465704 /* Message.swift */; };
 		A1DCCF7126593B4800465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF7026593B4800465704 /* LeanCloud */; };
@@ -43,8 +43,8 @@
 		A1DCCF602658BDA600465704 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A1DCCF632658F71A00465704 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A1DCCF642658F7EC00465704 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A1DCCF652658F94800465704 /* ReceivedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessage.swift; sourceTree = "<group>"; };
-		A1DCCF682658F96200465704 /* SentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessage.swift; sourceTree = "<group>"; };
+		A1DCCF652658F94800465704 /* ReceivedMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessageBubble.swift; sourceTree = "<group>"; };
+		A1DCCF682658F96200465704 /* SentMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessageBubble.swift; sourceTree = "<group>"; };
 		A1DCCF6D2659111800465704 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,8 +148,8 @@
 		A1DCCF6C2658FA0400465704 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1DCCF682658F96200465704 /* SentMessage.swift */,
-				A1DCCF652658F94800465704 /* ReceivedMessage.swift */,
+				A1DCCF682658F96200465704 /* SentMessageBubble.swift */,
+				A1DCCF652658F94800465704 /* ReceivedMessageBubble.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -265,9 +265,9 @@
 				A1DCCF5A26589CC400465704 /* LoginView.swift in Sources */,
 				A10283442657F94E0097B7A6 /* ContentView.swift in Sources */,
 				A1DCCF612658BDA600465704 /* Client.swift in Sources */,
-				A1DCCF692658F96200465704 /* SentMessage.swift in Sources */,
+				A1DCCF692658F96200465704 /* SentMessageBubble.swift in Sources */,
 				A10283422657F94E0097B7A6 /* ChatStackApp.swift in Sources */,
-				A1DCCF662658F94900465704 /* ReceivedMessage.swift in Sources */,
+				A1DCCF662658F94900465704 /* ReceivedMessageBubble.swift in Sources */,
 				A1DCCF6E2659111800465704 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,9 +279,9 @@
 				A1DCCF5B26589CC400465704 /* LoginView.swift in Sources */,
 				A10283452657F94E0097B7A6 /* ContentView.swift in Sources */,
 				A1DCCF622658BDA600465704 /* Client.swift in Sources */,
-				A1DCCF6A2658F96200465704 /* SentMessage.swift in Sources */,
+				A1DCCF6A2658F96200465704 /* SentMessageBubble.swift in Sources */,
 				A10283432657F94E0097B7A6 /* ChatStackApp.swift in Sources */,
-				A1DCCF672658F94900465704 /* ReceivedMessage.swift in Sources */,
+				A1DCCF672658F94900465704 /* ReceivedMessageBubble.swift in Sources */,
 				A1DCCF6F2659111800465704 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

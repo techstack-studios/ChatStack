@@ -1,5 +1,5 @@
 //
-//  SentMessage.swift
+//  SentMessageBubble.swift
 //  ChatStack
 //
 //  Created by Andy on 2021/5/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SentMessage: View {
+struct SentMessageBubble: View {
     
     var message: String
     
@@ -25,9 +25,9 @@ struct SentMessage: View {
     
 }
 
-struct SentMessage_Previews: PreviewProvider {
+struct SentMessageBubble_Previews: PreviewProvider {
     static var previews: some View {
-        SentMessage(message: "Hi. What's your name?")
+        SentMessageBubble(message: "Hi. What's your name?")
             .previewLayout(.sizeThatFits)
     }
 }
