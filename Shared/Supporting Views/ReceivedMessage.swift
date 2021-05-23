@@ -21,7 +21,7 @@ struct ReceivedMessage: View {
                 Text(message)
                     .padding(8)
                     .padding(.horizontal, 6)
-                    .background(Color(.systemGray5))
+                    .background(Color(.systemGray5)) // FIXME: macOS uncompatible
                     .cornerRadius(10)
             }
             Spacer()

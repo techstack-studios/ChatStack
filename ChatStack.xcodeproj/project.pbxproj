@@ -16,7 +16,6 @@
 		A10283552657FB570097B7A6 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10283542657FB570097B7A6 /* Keys.plist */; };
 		A10283562657FB570097B7A6 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10283542657FB570097B7A6 /* Keys.plist */; };
 		A1DCCF5526580CC200465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF5426580CC200465704 /* LeanCloud */; };
-		A1DCCF5826580CE900465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF5726580CE900465704 /* LeanCloud */; };
 		A1DCCF5A26589CC400465704 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF5926589CC400465704 /* LoginView.swift */; };
 		A1DCCF5B26589CC400465704 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF5926589CC400465704 /* LoginView.swift */; };
 		A1DCCF612658BDA600465704 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF602658BDA600465704 /* Client.swift */; };
@@ -27,6 +26,7 @@
 		A1DCCF6A2658F96200465704 /* SentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF682658F96200465704 /* SentMessage.swift */; };
 		A1DCCF6E2659111800465704 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF6D2659111800465704 /* Message.swift */; };
 		A1DCCF6F2659111800465704 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCCF6D2659111800465704 /* Message.swift */; };
+		A1DCCF7126593B4800465704 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = A1DCCF7026593B4800465704 /* LeanCloud */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1DCCF5826580CE900465704 /* LeanCloud in Frameworks */,
+				A1DCCF7126593B4800465704 /* LeanCloud in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +191,7 @@
 			);
 			name = "ChatStack (macOS)";
 			packageProductDependencies = (
-				A1DCCF5726580CE900465704 /* LeanCloud */,
+				A1DCCF7026593B4800465704 /* LeanCloud */,
 			);
 			productName = "ChatStack (macOS)";
 			productReference = A102833E2657F94E0097B7A6 /* ChatStack.app */;
@@ -546,7 +546,7 @@
 			package = A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */;
 			productName = LeanCloud;
 		};
-		A1DCCF5726580CE900465704 /* LeanCloud */ = {
+		A1DCCF7026593B4800465704 /* LeanCloud */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A1DCCF5326580CC200465704 /* XCRemoteSwiftPackageReference "swift-sdk" */;
 			productName = LeanCloud;

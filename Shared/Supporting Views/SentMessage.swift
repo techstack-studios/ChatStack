@@ -18,7 +18,7 @@ struct SentMessage: View {
                 .padding(8)
                 .padding(.horizontal, 6)
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(Color.accentColor)
                 .cornerRadius(10)
         }
     }

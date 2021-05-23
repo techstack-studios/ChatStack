@@ -48,12 +48,12 @@ struct LoginView: View {
             Label("Login", systemImage: "person.crop.circle")
                 .labelStyle(IconOnlyLabelStyle())
                 .font(.system(size: 60))
-                .foregroundColor(Color(UIColor.systemGray))
+                .foregroundColor(.accentColor)
             Text("Login to ChatStack")
                 .font(.largeTitle)
                 .bold()
             TextField("User ID", text: $username)
-                .autocapitalization(.none)
+                .autocapitalization(.none) // FIXME: macOS uncompatible
                 .disableAutocorrection(true)
             SecureField("Password", text: $password) {
                 handleLogin(username: username, password: password)
